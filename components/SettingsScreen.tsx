@@ -7,16 +7,15 @@ import { ExamConfig, ExamType } from "@/lib/types";
 type Category = "cpa" | "boki";
 
 const EXAM_OPTIONS: { type: ExamType; label: string; category: Category }[] = [
-  { type: "short_may", label: "短答式（5月）",  category: "cpa"  },
-  { type: "short_dec", label: "短答式（12月）", category: "cpa"  },
-  { type: "essay",     label: "論文式（8月）",  category: "cpa"  },
+  { type: "short", label: "短答式", category: "cpa"  },
+  { type: "essay", label: "論文式", category: "cpa"  },
   { type: "boki1",     label: "簿記1級",        category: "boki" },
   { type: "boki2",     label: "簿記2級",        category: "boki" },
   { type: "boki3",     label: "簿記3級",        category: "boki" },
 ];
 
 const categoryOf = (type: ExamType): Category =>
-  ["boki1","boki2","boki3"].includes(type) ? "boki" : "cpa";
+  (["boki1","boki2","boki3"] as ExamType[]).includes(type) ? "boki" : "cpa";
 
 interface Props {
   examConfig: ExamConfig;

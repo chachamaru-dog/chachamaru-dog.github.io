@@ -11,9 +11,8 @@ const CATEGORY_OPTIONS: { type: Category; label: string; sub: string }[] = [
 ];
 
 const EXAM_OPTIONS: { type: ExamType; label: string; description: string; category: Category }[] = [
-  { type: "short_may", category: "cpa",  label: "短答式（5月）",  description: "財務・管理・監査・企業法 / 合格基準70%" },
-  { type: "short_dec", category: "cpa",  label: "短答式（12月）", description: "財務・管理・監査・企業法 / 合格基準70%" },
-  { type: "essay",     category: "cpa",  label: "論文式（8月）",  description: "会計学・監査・企業法・租税法・選択科目" },
+  { type: "short", category: "cpa",  label: "短答式",  description: "財務・管理・監査・企業法 / 合格基準70%" },
+  { type: "essay", category: "cpa",  label: "論文式",  description: "会計学・監査・企業法・租税法・選択科目" },
   { type: "boki1",     category: "boki", label: "簿記1級",        description: "商業簿記・会計学・工業簿記・原価計算" },
   { type: "boki2",     category: "boki", label: "簿記2級",        description: "商業簿記・工業簿記 / 合格基準70点" },
   { type: "boki3",     category: "boki", label: "簿記3級",        description: "商業簿記のみ / 合格基準70点" },

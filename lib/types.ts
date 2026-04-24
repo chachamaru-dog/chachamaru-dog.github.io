@@ -1,4 +1,4 @@
-export type ExamType = "short_may" | "short_dec" | "essay" | "boki1" | "boki2" | "boki3";
+export type ExamType = "short" | "essay" | "boki1" | "boki2" | "boki3";
 
 export interface ExamConfig {
   type: ExamType;
