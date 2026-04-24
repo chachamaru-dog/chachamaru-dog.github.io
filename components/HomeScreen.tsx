@@ -477,8 +477,8 @@ export default function HomeScreen({ state, onNavigate, onSaveTodos }: Props) {
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, minWidth: 0 }}>
             {/* フクロウ（固定） */}
             <img src="/desk-study.png" alt="" style={{ width: 88, height: 88, objectFit: "contain", flexShrink: 0 }} />
-            {/* 吹き出し（残りスペースを使う） */}
-            <div style={{ position: "relative", flex: 1, minWidth: 0, marginBottom: 6 }}>
+            {/* 吹き出し */}
+            <div style={{ position: "relative", flex: 1, minWidth: 0, maxWidth: "calc(100% - 180px)", marginBottom: 6 }}>
               <div style={{
                 background: "#FFFEF7",
                 border: "1.5px solid var(--line-md)",
@@ -495,16 +495,14 @@ export default function HomeScreen({ state, onNavigate, onSaveTodos }: Props) {
               <div style={{ position: "absolute", left: -8, bottom: 10, width: 0, height: 0, borderTop: "5px solid transparent", borderBottom: "5px solid transparent", borderRight: "9px solid var(--line-md)" }} />
               <div style={{ position: "absolute", left: -6, bottom: 11, width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderRight: "7px solid #FFFEF7" }} />
             </div>
-            {/* 本番まで日数（固定） */}
-            <div style={{ display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
-              <div>
-                <div style={{ fontSize: 9, fontWeight: 700, color: "var(--ink-muted)" }}>本番まで</div>
-                <div style={{ display: "inline-flex", alignItems: "baseline" }}>
-                  <span style={{ fontSize: 40, fontWeight: 900, lineHeight: 1, letterSpacing: "-0.04em", color: daysColor, fontFamily: "var(--font-en)" }}>
-                    {Math.max(0, daysLeft)}
-                  </span>
-                  <span style={{ fontSize: 14, fontWeight: 700, color: "var(--ink-muted)", marginLeft: 2 }}>日</span>
-                </div>
+            {/* 本番まで日数（固定・大きめ） */}
+            <div style={{ flexShrink: 0, textAlign: "center", minWidth: 80 }}>
+              <div style={{ fontSize: 10, fontWeight: 700, color: "var(--ink-muted)", marginBottom: 2 }}>本番まで</div>
+              <div style={{ display: "inline-flex", alignItems: "baseline" }}>
+                <span style={{ fontSize: 52, fontWeight: 900, lineHeight: 1, letterSpacing: "-0.04em", color: daysColor, fontFamily: "var(--font-en)" }}>
+                  {Math.max(0, daysLeft)}
+                </span>
+                <span style={{ fontSize: 16, fontWeight: 700, color: "var(--ink-muted)", marginLeft: 3 }}>日</span>
               </div>
             </div>
           </div>
