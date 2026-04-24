@@ -495,9 +495,8 @@ export default function HomeScreen({ state, onNavigate, onSaveTodos }: Props) {
               <div style={{ position: "absolute", left: -8, bottom: 10, width: 0, height: 0, borderTop: "5px solid transparent", borderBottom: "5px solid transparent", borderRight: "9px solid var(--line-md)" }} />
               <div style={{ position: "absolute", left: -6, bottom: 11, width: 0, height: 0, borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderRight: "7px solid #FFFEF7" }} />
             </div>
-            {/* 本番まで日数 + 木（固定） */}
+            {/* 本番まで日数（固定） */}
             <div style={{ display: "flex", alignItems: "center", gap: 4, flexShrink: 0 }}>
-              <GrowingTree daysLeft={daysLeft} size={46} />
               <div>
                 <div style={{ fontSize: 9, fontWeight: 700, color: "var(--ink-muted)" }}>本番まで</div>
                 <div style={{ display: "inline-flex", alignItems: "baseline" }}>
